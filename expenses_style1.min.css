@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+body {
+  background-color: #ffdfdf;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.profile-link {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav-items {
+  border-radius: 200px;
+  height: 40px;
+  background-color: #ffdfdf;
+  color: black;
+  border: 0;
+  padding: 5px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.nav-items:hover {
+  background-color: #ffb5b5;
+}
+
+nav {
+  position: relative;
+  top: -8px;
+  right: 10px;
+  width: 103%;
+  background-color: #f875aa;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1000;
+  padding: 10px;
+}
+
+nav img,
+nav .nav-items {
+  vertical-align: middle;
+  margin: 8px;
+}
+
+legend {
+  background-color: #aedefc;
+  padding: 0.75rem;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transform: translateX(-1.1rem);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  height: 4em;
+  width: auto;
+  margin: 1em auto;
+  background-color: #feb1c0;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit:hover {
+  letter-spacing: 0.8em;
+  background-color: #f08c99;
+}
+
+.submit {
+  color: white;
+  color: black;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 2px solid black;
+  text-align: center;
+  font-family: "Averia Serif Libre", serif;
+}
+
+table th {
+  background-color: #f875aa;
+  display: table-cell;
+}
+
+table tr:nth-child(even) {
+  background-color: #fff6f6;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+td {
+  position: relative;
+}
+
+input {
+  position: relative;
+  display: flex;
+  width: 40vw;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding: 16px 24px;
+  height: 15%;
+  text-align: center;
+  top: 16px;
+  background: #fff;
+  border: 2px solid #1b1b1b;
+  box-sizing: border-box;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+  background: #feb1c0;
+  border: 3px solid #1b1b1b;
+  border-radius: 16px;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 1300px;
+  margin: 10 auto;
+  padding: 35px;
+  background-color: #fff6f6;
+  border: 1px solid #f875aa;
+  border-radius: 90px;
+}
+
+.container p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #f875aa;
+}
+
+.container span {
+  font-weight: bold;
+  font-size: large;
+}
+
+.container span#amount::before,
+.container span#Income-value::before,
+.container span#expenditure-value::before,
+.container span#balance-amount::before,
+.container span#total-amount::before {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.container span#amount,
+.container span#Income-value,
+.container span#expenditure-value,
+.container span#balance-amount,
+.container span#total-amount {
+  display: block;
+  font-size: 18px;
+}
+
+fieldset {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+  background-color: rgb(240, 240, 240);
+  border-radius: 25px;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  bottom: 800px;
+  text-align: center;
+  color: #fff;
+}
+
+input[type="search"] {
+  padding: 8px;
+  border: 5px solid #aedefc;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f3ffe2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+input[type="search"]:focus {
+  outline: 0;
+  background-color: #fff;
+}
+
+#search-input {
+  border: 15px;
+  margin: 20px;
+}
+
+.warning-red {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+:root {
+  --bg-color: #f6f8fa;
+  --text-color: #1d1f27;
+  --main-color: #3a3dbe;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input:not(#type) {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  height: 42px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+form button {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f875aa;
+  margin-top: -5px;
+}
+
+form div:nth-child(-n + 2) {
+  flex-basis: 100%;
+}
+
+form div:nth-child(n + 3) {
+  flex-basis: calc(50% - 5px);
+}
+
+/* input#type {
+  appearance: none;
+  position: absolute;
+} */
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #eee;
+  border-radius: 5px;
+  position: relative;
+}
+
+.option span {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.option::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-color: #fff;
+  height: calc(100% - 10px);
+  width: calc(50% - 10px);
+  transform: translateX(5px);
+  border-radius: inherit;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 200ms;
+}
+
+input#type:checked~.option::before {
+  left: 50%;
+}
+
+.name {
+  flex: 1;
+}
+
+.name h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.name span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.amount {
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+.amount.income {
+  color: yellowgreen;
+  text-align: center;
+}
+
+.amount.expense {
+  color: indianred;
+  text-align: center;
+}
+
+.action {
+  background-color: #f00;
+  color: #fff;
+  height: 100%;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  /* transform: scaleX(0);
+  transform-origin: right;
+  transition: all 300ms; */
+}
+
+
+.action svg {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+#status {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.space {
+  margin: 10px;
+}
+
+.transaction-entry {
+  display: flex;
+  align-items: center;
+}
+
+#status {
+  color: red;
+  font-weight: bolder;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.no-results-message {
+  color: red;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#thead {
+  width: 90%;
+}

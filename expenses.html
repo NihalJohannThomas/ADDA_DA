@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="static/img/logo.png">
+    <title>Expense Book</title>
+    <!-- <link rel="stylesheet" type="text/css" href="expenses_style.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="static/CSS/expenses_style1.min.css" />
+    <script src="static/JS/expenses.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <nav>
+            <img src="static/img/logo.png" alt="Logo" height="80" width="80">
+            <a href="cashbooks.html" class="nav-items">Dashboard </a>
+            <a href="expenses.html" class="nav-items">Expenses</a>
+            <a href="report.html" class="nav-items">Expense Report</a>
+            <a href="about.html" class="nav-items">About Us</a>
+            <a href="logout.html" class="nav-items">Login/Register </a>
+            <div class="profile-link">
+                <a href="profile.html"><img src="static/img/user-profile.png" alt="Icon" height="80" width="80"></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="sub-container">
+            <div class="total-amount">
+                <fieldset>
+                    <legend>Budget</legend><br>
+                    <div id="budget-warning" style="display: none;"></div>
+                    <input type="number" id="total-amount-input" placeholder="Enter Your Budget" /><br>
+                    <button class="submit" id="set-budget-button">Set Budget</button>
+                </fieldset>
+            </div><br><br>
+
+            <div class="output-container">
+                <fieldset>
+                    <legend>Statistics:</legend><br>
+                    <div class="container">
+                        <p>Budget:</p>
+                        <span id="budget-amount">₹ 0.0</span>
+                        <p>Balance</p>
+                        <span id="balance">₹ 0.00</span>
+                        <p>Income</p>
+                        <span id="income" class="amount income">₹ 0.00</span>
+                        <p>Expense</p>
+                        <span id="expense" class="amount expense">₹ 0.00</span>
+                        <p>Remaining Budget:</p>
+                        <span id="budget-remaining">₹ 0.00</span>
+                    </div><br>
+
+                </fieldset>
+            </div>
+            <br><br>
+            <div id="transactionFormDiv">
+                <fieldset>
+                    <legend>Add Transaction</legend>
+
+                    <section>
+                        <form id="transactionForm">
+                            <div>
+                                <label for="type">
+                                    <input type="checkbox" name="type" id="type" autocomplete="on" />
+                                    <div class="option">
+                                        <span>Expense</span>
+                                        <span>Income</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="name">Description</label>
+                                <input type="text" id="name" name="name" placeholder="Enter the description"
+                                    autocomplete="on" required />
+                            </div>
+                            <div>
+                                <label for="amount">Amount:</label>
+                                <input type="number" id="amount" name="amount" min="1" step="0.5" required />
+                            </div>
+                            <div>
+                                <label for="source">Source:</label>
+                                <input type="text" id="source" name="source" list="payment-methods"
+                                    placeholder="Select Source" required /><br /><br />
+                                <datalist id="payment-methods">
+                                    <option value="Cash"></option>
+                                    <option value="Paytm"></option>
+                                    <option value="GPay"></option>
+                                    <option value="PhonePay"></option>
+                                    <option value="Netbanking"></option>
+                                </datalist>
+                            </div>
+
+                            <div>
+                                <label for="recipient">Recipient:</label>
+                                <input type="text" id="recipient" name="recipient" list="debit-recipients"
+                                    placeholder="Sent to" required /><br /><br />
+                                <datalist id="debit-recipients">
+                                    <option value="Medical Store"></option>
+                                    <option value="Grocery Shop"></option>
+                                    <option value="Saloon"></option>
+                                    <option value="Arcade"></option>
+                                </datalist>
+                            </div>
+                            <div>
+                                <label for="date">Date:</label>
+                                <input type="datetime-local" id="date" name="date" min="2024-01-01T08:30"
+                                    max="2099-12-31T16:30" required />
+                                <!-- value="2024-01-16T14:50" -->
+                            </div>
+                            <br><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </section>
+
+
+                </fieldset>
+            </div>
+
+            <div>
+                <fieldset>
+                    <legend>Search This Book 🔎</legend>
+                    <br>
+                    <input type="search" placeholder="Type to search..." list="search-options" id="searchInput">
+                    <datalist id="search-options">
+                        <option value="Burger">
+                        <option value="Pizza">
+                        <option value="Sausage">
+                        <option value="Pasta"></option>
+                        <option value="Akshaj"></option>
+                        <option value="Idly"></option>
+                    </datalist><br><br>
+                </fieldset>
+            </div>
+            <hr>
+            <div>
+                <fieldset id="myTable1">
+                    <legend>Expense List</legend><br>
+                    <br><br>
+                    <!-- <table id="head">
+                        <thead>
+                            <tr>
+                              <th>Description</th>
+                              <th>Amount</th>
+                              <th>Payment Method</th>
+                              <th>Recipient</th>
+                              <th>Date</th>
+                              <th>Action</th>
+                            </tr>
+                            </thead>
+                    </table> -->
+                    <ul id="transactionList"></ul>
+                    <div id="status"></div>
+                </fieldset>
+            </div>
+
+
+            <footer>
+                <p>&copy; 2024 Budget Buddy. All Rights Reserved.</p>
+            </footer>
+        </div>
+</body>
+
+</html>
